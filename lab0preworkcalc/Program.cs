@@ -27,17 +27,17 @@ namespace lab0preworkcalc
             else if (userCalcChoice == "-" || userCalcChoiceUpper == "SUBTRACT")
             {
                 int subAnswer = Subtraction(userParamOne, userParamTwo);
-                Console.WriteLine($"{userParamOne} + {userParamTwo} = {subAnswer}");
+                Console.WriteLine($"{userParamOne} - {userParamTwo} = {subAnswer}");
             }
             else if (userCalcChoice == "*" || userCalcChoiceUpper == "MULTIPLY")
             {
                 int multAnswer = Multiplication(userParamOne, userParamTwo);
-                Console.WriteLine($"{userParamOne} + {userParamTwo} = {multAnswer}");
+                Console.WriteLine($"{userParamOne} * {userParamTwo} = {multAnswer}");
             }
             else if (userCalcChoice == "/" || userCalcChoiceUpper == "DIVIDE")
             {
                 int divAnswer = Division(userParamOne, userParamTwo);
-                Console.WriteLine($"{userParamOne} + {userParamTwo} = {divAnswer}");
+                Console.WriteLine($"{userParamOne} / {userParamTwo} = {divAnswer}");
             }
             else //they didn't chose on of my selection, add do while if I have time later to repeat to ask until I get a valid choice
             {
@@ -69,6 +69,7 @@ namespace lab0preworkcalc
         private static int Division(int num1, int num2)
         {
             return num1 / num2;
+            //if time, add try blcok for if div by zero
         }
     }
 }

@@ -36,8 +36,16 @@ namespace lab0preworkcalc
             }
             else if (userCalcChoice == "/" || userCalcChoiceUpper == "DIVIDE")
             {
-                int divAnswer = Division(userParamOne, userParamTwo);
-                Console.WriteLine($"{userParamOne} / {userParamTwo} = {divAnswer}");
+                //if time, add try block for if div by zero
+                try
+                {
+                    int divAnswer = Division(userParamOne, userParamTwo);
+                    Console.WriteLine($"{userParamOne} / {userParamTwo} = {divAnswer}");
+                }
+                catch (DivideByZeroException ex)
+                {
+                    Console.WriteLine("Cannot divide by zero");
+                }
             }
             else //they didn't chose on of my selection, add do while if I have time later to repeat to ask until I get a valid choice
             {
@@ -69,7 +77,6 @@ namespace lab0preworkcalc
         private static int Division(int num1, int num2)
         {
             return num1 / num2;
-            //if time, add try blcok for if div by zero
         }
     }
 }
